@@ -1,0 +1,16 @@
+{
+    "name": "rps.ivoxavier",
+    "description": "description of RPS",
+    "architecture": "armhf",
+    "title": "RPS",
+    "hooks": {
+        "RPS": {
+            "apparmor": "RPS/RPS.apparmor",
+            "desktop":  "RPS/RPS.desktop"
+        }
+    },
+    "version": "0.3",
+    "maintainer": "Ivo Xavier <ivofernandes12@gmail.com>",
+    "framework" : "ubuntu-sdk-16.04"
+}
+
