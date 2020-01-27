@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-21 16:37+0000\n"
+"POT-Creation-Date: 2020-01-27 14:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,25 +17,30 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/ivo/rockpapperscissors/RPS/Main.qml:28
-#: /home/ivo/rockpapperscissors/build/RPS/RPS.desktop.h:1
+#: /home/ivo/UBports/RPS/RPS/Main.qml:45
+#: /home/ivo/UBports/RPS/build/tmp/RPS/Main.qml:28
+#: /home/ivo/UBports/RPS/build/arm-linux-gnueabihf/app/RPS/RPS.desktop.h:1
 msgid "RPS"
 msgstr ""
 
-#: /home/ivo/rockpapperscissors/RPS/rps.js:22
+#: /home/ivo/UBports/RPS/RPS/rps.js:39
+#: /home/ivo/UBports/RPS/build/tmp/RPS/rps.js:22
 msgid "Draw!"
 msgstr ""
 
-#: /home/ivo/rockpapperscissors/RPS/rps.js:25
-#: /home/ivo/rockpapperscissors/RPS/rps.js:34
+#: /home/ivo/UBports/RPS/RPS/rps.js:42 /home/ivo/UBports/RPS/RPS/rps.js:51
+#: /home/ivo/UBports/RPS/build/tmp/RPS/rps.js:25
+#: /home/ivo/UBports/RPS/build/tmp/RPS/rps.js:34
 msgid "Scissors wins!"
 msgstr ""
 
-#: /home/ivo/rockpapperscissors/RPS/rps.js:28
-#: /home/ivo/rockpapperscissors/RPS/rps.js:31
+#: /home/ivo/UBports/RPS/RPS/rps.js:45 /home/ivo/UBports/RPS/RPS/rps.js:48
+#: /home/ivo/UBports/RPS/build/tmp/RPS/rps.js:28
+#: /home/ivo/UBports/RPS/build/tmp/RPS/rps.js:31
 msgid "Rock wins!"
 msgstr ""
 
-#: /home/ivo/rockpapperscissors/RPS/rps.js:37
+#: /home/ivo/UBports/RPS/RPS/rps.js:54
+#: /home/ivo/UBports/RPS/build/tmp/RPS/rps.js:37
 msgid "Papper Wins!"
 msgstr ""
