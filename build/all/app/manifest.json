@@ -1,7 +1,7 @@
 {
     "name": "rps.ivoxavier",
     "description": "description of RPS",
-    "architecture": "@CLICK_ARCH@",
+    "architecture": "all",
     "title": "RPS",
     "hooks": {
         "RPS": {
@@ -11,6 +11,6 @@
     },
     "version": "0.5",
     "maintainer": "Ivo Xavier <ivofernandes12@gmail.com>",
-    "framework" : "@CLICK_FRAMEWORK@"
+    "framework" : ""
 }
 
