@@ -19,11 +19,12 @@ import Ubuntu.Components.Popups 1.3
 import "./Components"
 
 MainView {
+    id: root
     objectName: "mainView"
     applicationName: "rps.ivoxavier"
     width: units.gu(45)
     height: units.gu(75)
-
+    backgroundColor: UbuntuColors.porcelain
     PageStack{
         id: mainStack
         anchors.fill: parent

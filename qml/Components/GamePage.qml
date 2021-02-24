@@ -26,12 +26,17 @@ Page {
     objectName: "GamePage"
     header: PageHeader {
     id: pageHeader
-            title: i18n.tr("RPS")
+        title: i18n.tr("RPS")
+            StyleHints {
+                foregroundColor: UbuntuColors.porcelain
+                backgroundColor: "#594092"
+            }
     }
 
     property int imagesHeights: scissors.height
     property var objectNameToAnimation : {}
     property color followSystemTheme : {}
+    property color alternativeTheme : {}
     property int activeTheme: Suru.theme === 0 ? followSystemTheme = UbuntuColors.porcelain : followSystemTheme = UbuntuColors.dark
     
 
@@ -40,12 +45,42 @@ Page {
     property var imgRockPath : "../imgs/rock.png"
 
     Column {
+        id: mainColumn
         anchors.top: pageHeader.bottom
-        spacing: 20
+        spacing: 94
+        
 
         Rectangle{
             width: page.width
-            height: 220
+            height: 22
+            color: followSystemTheme
+            Row{
+                //anchors.top: parent
+                spacing: 23
+                anchors{
+                    horizontalCenter: parent.horizontalCenter
+                    verticalCenter: parent.verticalCenter
+                }
+                Label{
+                    id: cpuWinsCount
+                    text: "CPU: 0"
+                    font.pixelSize: 22
+                    font.weight: Font.DemiBold
+
+                }
+                Label{
+                    id: humanWinsCount
+                    text: "Human: 0"
+                    font.pixelSize: 22
+                    font.weight: Font.Bold
+
+                } 
+            }
+        }
+
+        Rectangle{
+            width: page.width
+            height: scissors.height
             color: followSystemTheme
 
             Image {
@@ -74,6 +109,7 @@ Page {
             width: page.width
             height: imagesHeights
             color: followSystemTheme
+            //anchors.bottom: mainColumn.bottom
 
             Row {
                 id: rowButton
@@ -115,7 +151,7 @@ Page {
                     MouseArea{
                         anchors.fill: parent
                         onClicked: {
-                            console.log("paperButton")
+                            //console.log("paperButton")
                             objectNameToAnimation = paper
                             animation.start()
                             Game.play("p")
@@ -129,7 +165,7 @@ Page {
                     MouseArea{
                         anchors.fill: parent
                         onClicked: {
-                            console.log("rockButton")
+                            //console.log("rockButton")
                             objectNameToAnimation = rock
                             animation.start()
                             Game.play("r")
@@ -143,7 +179,7 @@ Page {
                     MouseArea{
                         anchors.fill: parent
                         onClicked: {
-                            console.log("scissorsButton")
+                            //console.log("scissorsButton")
                             objectNameToAnimation = scissors
                             animation.start()
                             Game.play("s")

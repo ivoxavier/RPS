@@ -15,7 +15,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-function play (letter){
+var cpuWins = 0
+var humanWins = 0
+
+function play (letter){    
     var userchoice = letter;
     var phonechoice = Math.random();
 
@@ -31,28 +34,45 @@ function play (letter){
         phonechoice = "s";
         cpuChoiceImage.source = imgScissorsPath;
     }
-    console.log('CPU: ' + phonechoice + '\n' + 'Human: ' + userchoice);
+    //console.log('CPU: ' + phonechoice + '\n' + 'Human: ' + userchoice);
 
     var compare = function(choice1, choice2){
 
         if(choice1 === choice2){
             //Draw
-
+            console.log("DRAW")
         } else if(choice1 === "p" & choice2 === "s"){
             //Scissors
-        
+            console.log("HUMAN WINS")
+            humanWins++
+            humanWinsCount.text = "Human: " + humanWins
         } else if(choice1 === "r" & choice2 === "s"){
             //Rock
-        
+            console.log("CPU WINS")
+            cpuWins++
+            cpuWinsCount.text = "CPU: " + cpuWins
         } else if(choice1 === "s" & choice2 === "r"){
             //Rock
-        
+            console.log("HUMAN WINS")
+            humanWins++
+            humanWinsCount.text = "Human: " + humanWins
         } else if(choice1 === "s" & choice2 === "p"){
             //Scissors
-            
+            console.log("CPU WINS")
+            cpuWins++
+            cpuWinsCount.text = "CPU: " + cpuWins
         } else if (choice1 === "r" & choice2 === "p"){
             //Papper
-            
+            console.log("HUMAN WINS")
+            humanWins++
+            humanWinsCount.text = "Human: " + humanWins
+        } else if (choice1 === "p" & choice2 === "r"){
+            //Papper
+            console.log("CPU WINS")
+            cpuWins++
+            cpuWinsCount.text = "CPU: " + cpuWins
+        } else {
+            console.log("option outside possibilities")
         }
     }
 compare(phonechoice, userchoice);
