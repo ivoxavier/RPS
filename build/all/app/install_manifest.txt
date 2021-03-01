@@ -5,9 +5,7 @@
 //qml/imgs/question.png
 //qml/imgs/scissors.png
 //qml/imgs/rock.png
-//qml/imgs/vs.png
 //qml/js/rps.js
-//qml/AboutPage.qml
 //qml/Main.qml
 //qml/Components/GamePage.qml
 //rps.desktop
