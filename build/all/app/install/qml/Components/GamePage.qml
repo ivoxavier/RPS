@@ -1,6 +1,6 @@
 /*
- * 2017-2018 Ivo Xavier <ivofernandes12@gmail.com>
- * 2021 - Ivo Xavier <ivofernandes12@gmail.com>
+ * 2017-2021 Ivo Xavier <ivofernandes12@gmail.com>
+ * 
  *  
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -18,41 +18,78 @@
 import QtQuick 2.9
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
-import QtQuick.Controls.Suru 2.2
 import "../js/rps.js" as Game
 
 Page {
     id: page
     objectName: "GamePage"
     header: PageHeader {
-    id: pageHeader
-            title: i18n.tr("RPS")
+        id: pageHeader
+        title: i18n.tr("RPS")
+        StyleHints {
+            foregroundColor: UbuntuColors.porcelain
+            backgroundColor: "#594092"
+        }
     }
 
     property int imagesHeights: scissors.height
     property var objectNameToAnimation : {}
-    property color followSystemTheme : {}
-    property int activeTheme: Suru.theme === 0 ? followSystemTheme = UbuntuColors.porcelain : followSystemTheme = UbuntuColors.dark
-    
-
     property var imgPaperPath : "../imgs/papper.png"
     property var imgScissorsPath : "../imgs/scissors.png"
     property var imgRockPath : "../imgs/rock.png"
 
     Column {
+        id: mainColumn
         anchors.top: pageHeader.bottom
-        spacing: 20
+        anchors.bottom: page.bottom
+        anchors.right: page.right
+        anchors.left: page.left
+        spacing: 104
+        topPadding: 3
+        
 
         Rectangle{
+            id: resultRow
             width: page.width
-            height: 220
+            height: 42
+            color: followSystemTheme
+            Row{
+                //anchors.top: parent
+                spacing: 44
+                anchors{
+                    horizontalCenter: parent.horizontalCenter
+                    verticalCenter: parent.verticalCenter
+                }
+                Label{
+                    id: cpuWinsCount
+                    text: "CPU: 0"
+                    font.pixelSize: 42
+                    font.weight: Font.DemiBold
+
+                }
+                Label{
+                    id: humanWinsCount
+                    text: "Human: 0"
+                    font.pixelSize: 42
+                    font.weight: Font.Bold
+
+                } 
+            }
+        }
+
+        Rectangle{
+            id: boxQuestion
+            width: page.width
+            height: page.height / 4
             color: followSystemTheme
 
             Image {
                 id: cpuChoiceImage
                 anchors.centerIn: parent
                 source: "../imgs/question.png"
-                fillMode: Image.Stretch
+                sourceSize.width: 1000
+                sourceSize.height: 1000
+                //scale: Qt.KeepAspectRatio 
             }
         }
 
@@ -71,13 +108,15 @@ Page {
 
 
         Rectangle {
+            id: imageBox
             width: page.width
-            height: imagesHeights
+            height: 1000
             color: followSystemTheme
+          
 
             Row {
                 id: rowButton
-                spacing: 13
+                spacing: 60
                 anchors{
                     horizontalCenter: parent.horizontalCenter
                     verticalCenter: parent.verticalCenter
@@ -112,10 +151,14 @@ Page {
                 Image{
                     id: paper
                     source: imgPaperPath
+                    //fillMode: Image.PreserveAspectFit
+                    sourceSize.width: 1000
+                    sourceSize.height: 1000
+                    //scale: Qt.KeepAspectRatio 
                     MouseArea{
                         anchors.fill: parent
                         onClicked: {
-                            console.log("paperButton")
+                            //console.log("paperButton")
                             objectNameToAnimation = paper
                             animation.start()
                             Game.play("p")
@@ -126,10 +169,14 @@ Page {
                 Image{
                     id: rock
                     source: imgRockPath
+                    //fillMode: Image.PreserveAspectFit
+                    sourceSize.width: 1000
+                    sourceSize.height: 1000
+                    //scale: Qt.KeepAspectRatio 
                     MouseArea{
                         anchors.fill: parent
                         onClicked: {
-                            console.log("rockButton")
+                            //console.log("rockButton")
                             objectNameToAnimation = rock
                             animation.start()
                             Game.play("r")
@@ -140,10 +187,14 @@ Page {
                 Image{
                     id: scissors
                     source: imgScissorsPath
+                    //fillMode: Image.PreserveAspectFit
+                    sourceSize.width: 1000
+                    sourceSize.height: 1000
+                    //scale: Qt.KeepAspectRatio                    
                     MouseArea{
                         anchors.fill: parent
                         onClicked: {
-                            console.log("scissorsButton")
+                            //console.log("scissorsButton")
                             objectNameToAnimation = scissors
                             animation.start()
                             Game.play("s")
