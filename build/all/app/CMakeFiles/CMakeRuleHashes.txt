@@ -1,3 +1,3 @@
 # Hashes of file build rules.
 07f21c4a42134dc8914d1afe2509736e CMakeFiles/rps.desktop
-f4deae18bdb3e914c3939e2f833dd903 po/CMakeFiles/rps.ivoxavier.pot
+545a85287a3dee4d066066dba0f111f7 po/CMakeFiles/rps.ivoxavier.pot

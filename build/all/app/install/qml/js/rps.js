@@ -1,6 +1,6 @@
 /*
- * 2017-2018 Ivo Xavier <ivofernandes12@gmail.com>.
- * 2021 Ivo Xavier <ivofernandes12@gmail.com>.
+ * 2017-2021 Ivo Xavier <ivofernandes12@gmail.com>.
+ * 
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -24,7 +24,7 @@ function play (letter){
 
     if(phonechoice < 0.34){
         phonechoice = "r";
-        cpuChoiceImage.source = imgRockPath
+        cpuChoiceImage.source = imgRockPath;
 
     } else if(phonechoice <= 0.67){
         phonechoice = "p";
@@ -34,45 +34,38 @@ function play (letter){
         phonechoice = "s";
         cpuChoiceImage.source = imgScissorsPath;
     }
-    //console.log('CPU: ' + phonechoice + '\n' + 'Human: ' + userchoice);
+
 
     var compare = function(choice1, choice2){
 
         if(choice1 === choice2){
             //Draw
-            console.log("DRAW")
         } else if(choice1 === "p" & choice2 === "s"){
             //Scissors
-            console.log("HUMAN WINS")
-            humanWins++
-            humanWinsCount.text = "Human: " + humanWins
+            humanWins++;
+            humanWinsCount.text = "Human: " + humanWins;
         } else if(choice1 === "r" & choice2 === "s"){
             //Rock
-            console.log("CPU WINS")
-            cpuWins++
-            cpuWinsCount.text = "CPU: " + cpuWins
+            cpuWins++;
+            cpuWinsCount.text = "CPU: " + cpuWins;
         } else if(choice1 === "s" & choice2 === "r"){
             //Rock
-            console.log("HUMAN WINS")
-            humanWins++
-            humanWinsCount.text = "Human: " + humanWins
+            humanWins++;
+            humanWinsCount.text = "Human: " + humanWins;
         } else if(choice1 === "s" & choice2 === "p"){
             //Scissors
-            console.log("CPU WINS")
             cpuWins++
             cpuWinsCount.text = "CPU: " + cpuWins
         } else if (choice1 === "r" & choice2 === "p"){
-            //Papper
-            console.log("HUMAN WINS")
-            humanWins++
-            humanWinsCount.text = "Human: " + humanWins
+            //Paper
+            humanWins++;
+            humanWinsCount.text = "Human: " + humanWins;
         } else if (choice1 === "p" & choice2 === "r"){
-            //Papper
-            console.log("CPU WINS")
-            cpuWins++
-            cpuWinsCount.text = "CPU: " + cpuWins
+            //Paper
+            cpuWins++;
+            cpuWinsCount.text = "CPU: " + cpuWins;
         } else {
-            console.log("option outside possibilities")
+            //Error
         }
     }
 compare(phonechoice, userchoice);

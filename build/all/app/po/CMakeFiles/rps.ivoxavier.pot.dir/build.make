@@ -56,7 +56,7 @@ include po/CMakeFiles/rps.ivoxavier.pot.dir/progress.make
 po/CMakeFiles/rps.ivoxavier.pot:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ivo/ubtouchApps/RPS/build/all/app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating translation template"
 	cd /home/ivo/ubtouchApps/RPS/build/all/app/po && /usr/bin/intltool-extract --update --type=gettext/ini --srcdir=/home/ivo/ubtouchApps/RPS rps.desktop.in
-	cd /home/ivo/ubtouchApps/RPS/build/all/app/po && /usr/bin/xgettext -o rps.ivoxavier.pot -D /home/ivo/ubtouchApps/RPS/po -D /home/ivo/ubtouchApps/RPS/build/all/app/po --from-code=UTF-8 --c++ --qt --language=javascript --add-comments=TRANSLATORS --keyword=tr --keyword=tr:1,2 --keyword=ctr:1c,2 --keyword=dctr:2c,3 --keyword=N_ --keyword=_ --keyword=dtr:2 --keyword=dtr:2,3 --keyword=tag --keyword=tag:1c,2 --package-name='rps.ivoxavier' --sort-by-file ../qml/Main.qml ../qml/Components/GamePage.qml ../qml/js/rps.js rps.desktop.in.h
+	cd /home/ivo/ubtouchApps/RPS/build/all/app/po && /usr/bin/xgettext -o rps.ivoxavier.pot -D /home/ivo/ubtouchApps/RPS/po -D /home/ivo/ubtouchApps/RPS/build/all/app/po --from-code=UTF-8 --c++ --qt --language=javascript --add-comments=TRANSLATORS --keyword=tr --keyword=tr:1,2 --keyword=ctr:1c,2 --keyword=dctr:2c,3 --keyword=N_ --keyword=_ --keyword=dtr:2 --keyword=dtr:2,3 --keyword=tag --keyword=tag:1c,2 --package-name='rps.ivoxavier' --sort-by-file ../qml/Backend.qml ../qml/Main.qml ../qml/Components/GamePage.qml ../qml/Components/BlankSpace.qml ../qml/js/rps.js rps.desktop.in.h
 	cd /home/ivo/ubtouchApps/RPS/build/all/app/po && /usr/bin/cmake -E copy rps.ivoxavier.pot /home/ivo/ubtouchApps/RPS/po
 
 rps.ivoxavier.pot: po/CMakeFiles/rps.ivoxavier.pot

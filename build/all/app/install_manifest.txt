@@ -1,11 +1,14 @@
 //manifest.json
 //rps.apparmor
 //assets/logo.png
-//qml/imgs/papper.png
 //qml/imgs/question.png
+//qml/imgs/paper.png
 //qml/imgs/scissors.png
 //qml/imgs/rock.png
+//qml/Backend.qml
 //qml/js/rps.js
+//qml/py/main.py
 //qml/Main.qml
 //qml/Components/GamePage.qml
+//qml/Components/BlankSpace.qml
 //rps.desktop
