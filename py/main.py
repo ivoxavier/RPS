@@ -53,5 +53,5 @@ def game(user_choice):
         elif user_choice == "scissors":
                 if computer_choice == "paper":
                         pyotherside.send("s_user_wins",1)
-        elif computer_choice == "rock":
+                elif computer_choice == "rock":
                         pyotherside.send("s_cpu_wins",1)
