@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.9
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import QtQuick.Controls.Suru 2.2
 import io.thp.pyotherside 1.4
 import Qt.labs.settings 1.0
@@ -28,7 +28,7 @@ MainView {
     applicationName: "rps.ivoxavier"
 
     property color followSystemTheme : {}
-    property int activeTheme: Suru.theme === 0 ? followSystemTheme = UbuntuColors.porcelain : followSystemTheme = UbuntuColors.dark
+    property int activeTheme: Suru.theme === 0 ? followSystemTheme = LomiriColors.porcelain : followSystemTheme = LomiriColors.dark
     
     signal newGame()
 
