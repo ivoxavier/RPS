@@ -9,8 +9,8 @@
             "desktop":  "rps.desktop"
         }
     },
-    "version": "0.6.2",
+    "version": "0.6.3",
     "maintainer": "Ivo Xavier <ivofernandes12@gmail.com>",
-    "framework" : "@CLICK_FRAMEWORK@"
+    "framework" : "ubuntu-sdk-20.04"
 }
 
